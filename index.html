@@ -2,6 +2,14 @@
 <html>
 <head>
   <title>Random Password Generator</title>
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
   <script>
     function generatePassword() {
       var length = 16,
@@ -21,10 +29,12 @@
   </script>
 </head>
 <body>
-  <div>
-    <input type="text" id="password" />
-    <button onclick="generatePassword()">Generate Password</button>
-    <button onclick="copyPassword()">Copy Password</button>
+  <div class="center">
+    <div>
+      <input type="text" id="password" />
+      <button onclick="generatePassword()">Generate Password</button>
+      <button onclick="copyPassword()">Copy Password</button>
+    </div>
   </div>
 </body>
 </html>
