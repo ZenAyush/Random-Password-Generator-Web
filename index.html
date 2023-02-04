@@ -3,16 +3,42 @@
 <head>
   <title>Random Password Generator</title>
   <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
     .center {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-    h1 {
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 24px;
+      margin-bottom: 20px;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 24px;
+      background-color: #007bff;
+      color: #fff;
+      border: 0;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 20px;
+    }
   </style>
   <script>
     function generatePassword() {
@@ -33,11 +59,13 @@
   </script>
 </head>
 <body>
- <h>Random Password Generator</h>
-    <div class="center">
+  <h1>Random Password Generator</h1>
+  <div class="center">
+    <div>
       <input type="text" id="password" />
       <button onclick="generatePassword()">Generate Password</button>
       <button onclick="copyPassword()">Copy Password</button>
+    </div>
   </div>
 </body>
 </html>
